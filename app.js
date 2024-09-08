@@ -19,7 +19,11 @@ function pesquisar() {
 
     // Variáveis que serão usadas para acumular os resultados e realizar a comparação
     let resultados = "";
+    let generos = "";
     let titulo = "";
+    let autor = "";
+    let publicacao = "";
+    let editora = "";
     let descricao = "";
     let tags = "";
 
@@ -27,11 +31,15 @@ function pesquisar() {
     for (let dado of dados) {
         // Converte o título e a descrição dos dados para letras minúsculas para fazer a comparação
         titulo = dado.titulo.toLocaleLowerCase();
+        generos = dado.generos.toLocaleLowerCase();
+        autor = dado.autor.toLocaleLowerCase();
         descricao = dado.descricao.toLocaleLowerCase();
+        publicacao = dado.publicacao.toLocaleLowerCase();
+        editora = dado.editora.toLocaleLowerCase();
         tags = dado.tags.toLocaleLowerCase();
 
         // Se o título ou a descrição conterem o texto digitado, o livro será incluído nos resultados
-        if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa)|| tags.includes(campoPesquisa)) {
+        if (titulo.includes(campoPesquisa) || generos.includes (campoPesquisa)|| descricao.includes(campoPesquisa)|| autor.includes(campoPesquisa)|| publicacao.includes(campoPesquisa)|| editora.includes (campoPesquisa)|| tags.includes (campoPesquisa)) {
             // Monta o HTML dinâmico com os dados encontrados e acumula na variável "resultados"
             resultados += `
             <div class="item-resultado">
