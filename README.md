@@ -1,11 +1,12 @@
 ##PAGINA VIRADA
 
+
 Página Virada é um site que permite aos usuários pesquisar livros e obter informações detalhadas sobre eles. Com uma interface simples e uma função de pesquisa eficiente, o site busca facilitar o acesso a informações relevantes sobre títulos literários, oferecendo descrições, links para mais detalhes, e a possibilidade de buscar por tags e palavras-chave.
 
 *Funcionalidades*
-Pesquisa por livros: Os usuários podem pesquisar por títulos, descrições ou tags associadas aos livros.
-Resultados dinâmicos: Exibe os resultados da busca em tempo real à medida que os usuários digitam no campo de pesquisa.
-Links externos: Oferece a opção de acessar mais informações sobre cada livro pesquisado por meio de links externos.
+*Pesquisa por livros: Os usuários podem pesquisar por títulos, descrições ou tags associadas aos livros.
+*Resultados dinâmicos: Exibe os resultados da busca em tempo real à medida que os usuários digitam no campo de pesquisa.
+*Links externos: Oferece a opção de acessar mais informações sobre cada livro pesquisado por meio de links externos.
 
 
 *Estrutura do Projeto*
