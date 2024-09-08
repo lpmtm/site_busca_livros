@@ -51,6 +51,8 @@ A busca é realizada a partir de uma lista de livros fictícia armazenada em um 
 *tags: Palavras-chave associadas ao conteúdo do livro.
 *link: Um URL que direciona para mais informações sobre o livro.
 
+*link vercel:*
+https://sitebuscalivros.vercel.app/
 
 *Contato*
 Caso tenha dúvidas ou sugestões, entre em contato:
