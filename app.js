@@ -1,4 +1,4 @@
-function pesquisar() { 
+function pesquisar() {
     // Obtém o elemento com o ID "resultados-pesquisa" para exibir os resultados da busca
     let section = document.getElementById("resultados-pesquisa");
     
@@ -10,53 +10,52 @@ function pesquisar() {
     
     // Se o campo de pesquisa estiver vazio, exibe uma mensagem informando que nenhuma informação foi encontrada
     if (campoPesquisa == "") {
-        section.innerHTML = "nenhuma informacao encontrada!";
-        return; // Encerra a função para não continuar a busca
+        section.innerHTML = "Nenhuma informação encontrada!";
+        return;
     }
-  
-    // Converte o texto digitado no campo de pesquisa para letras minúsculas, facilitando a busca (ignora maiúsculas/minúsculas)
+
+    // Converte o texto digitado no campo de pesquisa para letras minúsculas
     campoPesquisa = campoPesquisa.toLowerCase();
 
-    // Variáveis que serão usadas para acumular os resultados e realizar a comparação
+    // Variável para acumular os resultados
     let resultados = "";
-    let generos = "";
-    let titulo = "";
-    let autor = "";
-    let publicacao = "";
-    let editora = "";
-    let descricao = "";
-    let tags = "";
 
-    // Percorre a lista de objetos chamada "dados" (presumivelmente vinda de um arquivo externo)
+    // Percorre a lista de objetos chamada "dados"
     for (let dado of dados) {
-        // Converte o título e a descrição dos dados para letras minúsculas para fazer a comparação
-        titulo = dado.titulo.toLocaleLowerCase();
-        generos = dado.generos.toLocaleLowerCase();
-        autor = dado.autor.toLocaleLowerCase();
-        descricao = dado.descricao.toLocaleLowerCase();
-        publicacao = dado.publicacao.toLocaleLowerCase();
-        editora = dado.editora.toLocaleLowerCase();
-        tags = dado.tags.toLocaleLowerCase();
+        // Converte os campos para letras minúsculas
+        let titulo = dado.titulo.toLowerCase();
+        let generos = dado.generos.toLowerCase();
+        let autor = dado.autor.toLowerCase();
+        let descricao = dado.descricao.toLowerCase();
+        let publicacao = dado.publicacao.toLowerCase();
+        let editora = dado.editora.toLowerCase();
+        let tags = dado.tags.toLowerCase();
 
-        // Se o título ou a descrição conterem o texto digitado, o livro será incluído nos resultados
-        if (titulo.includes(campoPesquisa) || generos.includes (campoPesquisa)|| descricao.includes(campoPesquisa)|| autor.includes(campoPesquisa)|| publicacao.includes(campoPesquisa)|| editora.includes (campoPesquisa)|| tags.includes (campoPesquisa)) {
-            // Monta o HTML dinâmico com os dados encontrados e acumula na variável "resultados"
+        // Verifica se o texto digitado está presente em algum dos campos
+        if (titulo.includes(campoPesquisa) || generos.includes(campoPesquisa) || descricao.includes(campoPesquisa) ||
+            autor.includes(campoPesquisa) || publicacao.includes(campoPesquisa) || editora.includes(campoPesquisa) ||
+            tags.includes(campoPesquisa)) {
+            
+            // Monta o HTML dinâmico com os dados encontrados
             resultados += `
             <div class="item-resultado">
-                <h2>
-                     <a href="#" target="_blank">${dado.titulo}</a>
-                </h2>
-                <p class="descricao-meta">${dado.descricao}</p>
-                <a href="${dado.link}" target="_blank">mais informacoes</a>
+                <h2><a href="#" target="_blank">${dado.titulo}</a></h2>
+                <p><strong>Gêneros:</strong> ${dado.generos}</p>
+                <p><strong>Autor:</strong> ${dado.autor}</p>
+                <p><strong>Publicação:</strong> ${dado.publicacao}</p>
+                <p><strong>Editora:</strong> ${dado.editora}</p>
+                <p><strong>Descrição:</strong> ${dado.descricao}</p>
+                <a href="${dado.link}" target="_blank">Mais informações</a>
             </div>
             `;
         }
     }
 
-    if(!resultados){
-        resultados = "nenhuma informacao encontrada! livro digitado nao consta no banco de dados :( tente buscar por algo diferente. "
+    // Exibe a mensagem se não houver resultados
+    if (!resultados) {
+        resultados = "Nenhuma informação encontrada! O livro digitado não consta no banco de dados. :( Tente buscar por algo diferente.";
     }
-    
-    // Insere os resultados encontrados no elemento HTML da página (ou nada se nenhum resultado for encontrado)
+
+    // Insere os resultados na seção de resultados
     section.innerHTML = resultados;
 }
