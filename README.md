@@ -10,7 +10,7 @@ Página Virada é um site que permite aos usuários pesquisar livros e obter inf
 
 
 * Estrutura do Projeto:  
-O projeto é composto por três principais arquivos:
+O projeto é composto por três principais arquivos
 
 -index.html: Estrutura HTML da página, contendo o layout principal com o campo de pesquisa, área de exibição dos resultados e rodapé.  
 -styles.css: Arquivo de estilos que define a aparência visual do site, como cores, fontes e organização dos elementos.  
