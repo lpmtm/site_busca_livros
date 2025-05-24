@@ -10,25 +10,24 @@ Página Virada é um site que permite aos usuários pesquisar livros e obter inf
 
 
 * Estrutura do Projeto:  
-O projeto é composto por três principais arquivos
-
+O projeto é composto por três principais arquivos, sendo eles:   
 -index.html: Estrutura HTML da página, contendo o layout principal com o campo de pesquisa, área de exibição dos resultados e rodapé.  
 -styles.css: Arquivo de estilos que define a aparência visual do site, como cores, fontes e organização dos elementos.  
 -app.js: Contém a lógica JavaScript para manipular a busca, filtrar os dados e exibir os resultados na página.  
 
-*Como Utilizar:  
-Abra o arquivo index.html em um navegador.  
-Utilize o campo de pesquisa para digitar o título ou parte da descrição do livro que deseja buscar.  
-Pressione o botão "Pesquisar" para visualizar os resultados diretamente na página.  
+* Como Utilizar:  
+-Abra o arquivo index.html em um navegador.  
+-Utilize o campo de pesquisa para digitar o título ou parte da descrição do livro que deseja buscar.  
+-Pressione o botão "Pesquisar" para visualizar os resultados diretamente na página.  
 
 
 * Estrutura do Código:
-  
 O arquivo index.html segue a estrutura padrão de uma página web:  
-Um header que contém o título do site.  
-Um main que abriga a barra de pesquisa e a seção onde os resultados são exibidos.  
-Um footer com informações de contato e direitos reservados.  
+-Um header que contém o título do site.  
+-Um main que abriga a barra de pesquisa e a seção onde os resultados são exibidos.  
+-Um footer com informações de contato e direitos reservados.  
 
+#### Linguagens:
 
 *JavaScript:* 
 A função pesquisar() no arquivo app.js é responsável por:
