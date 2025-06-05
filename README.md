@@ -39,15 +39,15 @@ A função pesquisar() no arquivo app.js é responsável por:
 O arquivo styles.css define a aparência e layout do site, garantindo uma experiência visual agradável e consistente.
 
 *Banco de Dados:*
-A busca é realizada a partir de uma lista de livros fictícia armazenada em um arquivo dados.js. Cada livro contém os seguintes atributos:
-*titulo: O nome do livro.
-*generos: Generos do livro.
-*descricao: Uma breve descrição do livro.
-*autor: Escrito/escritora da obra.
-*publicação: Data de postagem do livro.
-*editora: Editora responsavel pelo livro.
-*tags: Palavras-chave associadas ao conteúdo do livro.
-*link: Um URL que direciona para mais informações sobre o livro.
+A busca é realizada a partir de uma lista de livros fictícia armazenada em um arquivo dados.js. Cada livro contém os seguintes atributos:  
+*titulo: O nome do livro.  
+*generos: Generos do livro.  
+*descricao: Uma breve descrição do livro.  
+*autor: Escrito/escritora da obra.  
+*publicação: Data de postagem do livro.  
+*editora: Editora responsavel pelo livro.  
+*tags: Palavras-chave associadas ao conteúdo do livro.  
+*link: Um URL que direciona para mais informações sobre o livro.  
 
 *link vercel:*
 https://sitebuscalivros.vercel.app/
